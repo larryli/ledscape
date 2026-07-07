@@ -1,8 +1,14 @@
-# CH32V003 WS2812 彩虹流水灯控制器
+# CH32V003 WS2812 LEDScape 控制器
 # 基于 ch32fun SDK
 
-# ch32fun SDK 路径
+# ch32fun SDK 路径 (可通过环境变量 CH32FUN_DIR 覆盖)
 CH32FUN_DIR ?= $(HOME)/ch32fun
+
+# 检查 SDK 是否存在
+CH32FUN_MK = $(CH32FUN_DIR)/ch32fun/ch32fun.mk
+ifeq ($(wildcard $(CH32FUN_MK)),)
+    $(error ch32fun SDK not found at $(CH32FUN_DIR). Clone: git clone https://github.com/cnlohr/ch32fun.git $(CH32FUN_DIR))
+endif
 
 # 目标名称
 TARGET := ledscape
@@ -24,6 +30,6 @@ endif
 ADDITIONAL_C_FILES = effects.c
 
 # 包含 ch32fun 构建系统
-include $(CH32FUN_DIR)/ch32fun/ch32fun.mk
+include $(CH32FUN_MK)
 
 clean : cv_clean

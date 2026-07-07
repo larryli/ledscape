@@ -20,6 +20,9 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             build-essential make gcc-riscv64-unknown-elf libnewlib-dev
 
+      - name: Clone ch32fun SDK
+        run: git clone https://github.com/cnlohr/ch32fun.git ~/ch32fun
+
       - name: Build
         run: |
           cd src
