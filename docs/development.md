@@ -21,7 +21,7 @@ make
 ### 1.2 SDK 依赖
 
 ```bash
-git clone https://github.com/cpq/ch32fun.git ~/ch32fun
+git clone https://github.com/cnlohr/ch32fun.git ~/ch32fun
 ```
 
 ## 2. 项目结构
@@ -249,5 +249,5 @@ Flash 还剩 8.7KB，可继续添加约 20-30 个效果。
 ## 8. 参考资源
 
 - [CH32V003 数据手册](http://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
-- [ch32fun SDK](https://github.com/cpq/ch32fun)
+- [ch32fun SDK](https://github.com/cnlohr/ch32fun)
 - [WS2812B 协议规范](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf)
