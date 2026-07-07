@@ -1,0 +1,14 @@
+# Build artifacts
+*.elf
+*.bin
+*.hex
+*.lst
+*.map
+*.o
+*.d
+
+# Generated linker scripts
+*.ld
+
+# ch32fun generated files
+ch32fun_*.ld
