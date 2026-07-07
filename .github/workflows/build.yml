@@ -1,0 +1,35 @@
+name: Build CI
+
+on:
+  push:
+    branches: [ master ]
+    tags: [ '*' ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get -yqq purge man-db || true
+          sudo apt-get install -y --no-install-recommends \
+            build-essential make gcc-riscv64-unknown-elf libnewlib-dev
+
+      - name: Build
+        run: |
+          cd src
+          make
+
+      - name: Upload artifacts
+        if: ${{ github.ref_type == 'tag' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: ledscape-${{github.ref_name}}
+          path: |
+            src/ledscape.bin
+            src/ledscape.hex

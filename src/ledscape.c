@@ -79,9 +79,8 @@ int main(void) {
     Effects_SwitchTo(TEST_EFFECT);
 #else
     shuffle();
-#endif
-
     uint16_t switch_counter = 0;
+#endif
 
     while (1) {
         while (WS2812BLEDInUse);
