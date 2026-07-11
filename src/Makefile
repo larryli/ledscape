@@ -32,4 +32,5 @@ ADDITIONAL_C_FILES = effects.c
 # 包含 ch32fun 构建系统
 include $(CH32FUN_MK)
 
+flash : cv_flash
 clean : cv_clean

@@ -12,4 +12,8 @@
 // 启用调试串口
 #define FUNCONF_USE_DEBUGPRINTF 1
 
+// DMA 缓冲区大小，必须 >= NR_LEDS，且为 4 的倍数
+// 实际槽位 = DMALEDS/2，需 > NR_LEDS + WS2812B_RESET_PERIOD(2)，留余量避免 ISR 竞态
+#define DMALEDS 68
+
 #endif
