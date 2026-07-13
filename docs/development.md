@@ -31,7 +31,8 @@ git clone https://github.com/cnlohr/ch32fun.git ~/ch32fun
 ├── README.md
 ├── docs/
 │   ├── requirements.md
-│   └── development.md
+│   ├── development.md
+│   └── hardware.md
 └── src/
     ├── Makefile
     ├── funconfig.h

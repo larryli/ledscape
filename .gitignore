@@ -12,3 +12,10 @@
 
 # ch32fun generated files
 ch32fun_*.ld
+
+# SDK
+ch32fun/
+easyeda-api-skill/
+
+# Hardware
+hardware/
