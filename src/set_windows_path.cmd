@@ -1,0 +1,1 @@
+@SET PATH=%PATH%;%LOCALAPPDATA%\mingw64\bin;%LOCALAPPDATA%\xpack-riscv-none-elf-gcc\14.2.0-3\bin

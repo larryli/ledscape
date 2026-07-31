@@ -2,7 +2,7 @@
 # 基于 ch32fun SDK
 
 # ch32fun SDK 路径 (可通过环境变量 CH32FUN_DIR 覆盖)
-CH32FUN_DIR ?= $(HOME)/ch32fun
+CH32FUN_DIR ?= ../ch32fun
 
 # 检查 SDK 是否存在
 CH32FUN_MK = $(CH32FUN_DIR)/ch32fun/ch32fun.mk
